@@ -1,25 +1,24 @@
 import logo from './logo.svg';
 import './App.css';
+import React from 'react';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+const Data = [
+  {prenom:"Aminata",nom:"Kimbiri",age:"19",profession:"Etudiante"},
+  {prenom:"Fatoumata",nom:"Kimbiri",age:"22",profession:"Pharmacienne"},
+  {prenom:"Ousmane",nom:"Kimbiri",age:"26",profession:"Manager"},
+  {prenom:"Mahamadou",nom:"Kimbiri",age:"70",profession:"Directeur"}
+]
+function Family({Data}) {
+  return (<div>
+    {Data.map(function (item) {
+      <React.StrictMode>
+      <h1>{item.nom} {item.nom}</h1>
+      {/* <h4>profession: {item.profession}</h4>
+      <p>agé de {item.prenom}</p> */}
+      </React.StrictMode>
+    })} 
+  </div>)
+}  
 
-export default App;
+export {Data};
+export default Family;
