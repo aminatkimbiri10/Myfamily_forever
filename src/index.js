@@ -1,17 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import Family, {Data} from './App';
+import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  Data.map((v)=>{
-    return (<Family nom={v.nom}/>)
-  })
   <React.StrictMode>
-    
+    <App/>
   </React.StrictMode>
 );
 
